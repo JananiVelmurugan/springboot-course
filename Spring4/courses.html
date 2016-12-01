@@ -1,0 +1,31 @@
+<html>
+<head>
+ <link rel="stylesheet" href="css/jquery-ui.min.css">
+<script src="js/jquery-3.1.1.min.js"></script>
+ <script src="js/jquery-ui.js"></script>
+ <script src="js/underscore-min.js"></script>
+
+<script >
+$(document).ready (function(){
+    alert("jquery loaded");
+$("#loadBtn").click(function(){
+    $.getJSON("http;//localhost:8080/courses",function(obj){
+        alert(JSON.stringify(obj));
+        
+        $.each(obj,function(key,value){
+            $("ul").append("<li>"+value.code+"<li>")
+            
+        });
+    });
+}});
+
+
+</script>
+</head>
+<body>
+<ul></ul>
+<button id="loadBtn">Click</button>
+
+
+</body>
+</html>
