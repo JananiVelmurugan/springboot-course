@@ -32,7 +32,7 @@ public class CourseDAO {
 	 * 
 	 * @param code
 	 *            course code
-	 * @return course object fro given code
+	 * @return course object for given code
 	 */
 	public Course get(String code) {
 
